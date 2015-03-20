@@ -90,6 +90,52 @@ public class WORLDTEN extends World
     
     private void prepare()
     {
+        Zookeeper zookeeper = new Zookeeper();
+        addObject(zookeeper, 175, 125);
+        Zookeeper2 zookeeper2 = new Zookeeper2();
+        addObject(zookeeper2, 325, 125);
+        Zookeeper2 zookeeper22 = new Zookeeper2();
+        addObject(zookeeper22, 975, 100);
+        zookeeper22.setLocation(975, 75);
+        Zookeeper zookeeper3 = new Zookeeper();
+        addObject(zookeeper3, 600, 675);
+        zookeeper3.setLocation(600, 650);
+        Zookeeper2 zookeeper23 = new Zookeeper2();
+        addObject(zookeeper23, 75, 475);
+        zookeeper23.setLocation(75, 475);
+        Zookeeper3 zookeeper32 = new Zookeeper3();
+        addObject(zookeeper32, 525, 1025);
+        removeObject(zookeeper32);
+        Zookeeper2 zookeeper24 = new Zookeeper2();
+        addObject(zookeeper24, 325, 800);
+        Lever lever = new Lever();
+        addObject(lever, 125, 1025);
+        lever.setLocation(125, 1025);
+        Trap trap = new Trap();
+        addObject(trap, 75, 775);
+        Endgate endgate = new Endgate();
+        addObject(endgate, 975, 975);
+        endgate.setLocation(1000, 1000);
+        Zookeeper2 zookeeper25 = new Zookeeper2();
+        addObject(zookeeper25, 625, 250);
+        zookeeper25.setLocation(625, 250);
+        Zookeeper zookeeper4 = new Zookeeper();
+        addObject(zookeeper4, 450, 375);
+        Trap trap2 = new Trap();
+        addObject(trap2, 650, 400);
+        Trap trap3 = new Trap();
+        addObject(trap3, 925, 725);
+        Zookeeper zookeeper5 = new Zookeeper();
+        addObject(zookeeper5, 525, 925);
+        Trap trap4 = new Trap();
+        addObject(trap4, 800, 975);
+        Trap trap5 = new Trap();
+        addObject(trap5, 675, 825);
+        Trap trap6 = new Trap();
+        addObject(trap6, 1025, 400);
+        Zookeeper zookeeper6 = new Zookeeper();
+        addObject(zookeeper6, 550, 550);
+        zookeeper6.setLocation(550, 550);
         while( wallNum1<22)
         {
             Wall wall=new Wall();
