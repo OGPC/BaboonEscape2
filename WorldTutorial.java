@@ -14,6 +14,7 @@ public class WorldTutorial extends World
     //3 is left column
     public static int lockStatus=1;
     public static int gameStatus=1;
+    public static int animStatus=1;
 
     int wallNum1=0;
     int wallX1=25;
@@ -95,7 +96,7 @@ public class WorldTutorial extends World
         Lever lever=new Lever();
         addObject(lever,675, 75);
 
-        Character character = new Character();
+        Character1 character = new Character1();
         addObject(character, 75, 75);
 
         Zookeeper zookeeper= new Zookeeper();
@@ -178,7 +179,8 @@ public class WorldTutorial extends World
             removeObjects(getObjects(Trap.class));
             removeObjects(getObjects(Lever.class));
             removeObjects(getObjects(Wall.class));
-            removeObjects(getObjects(Character.class));
+            removeObjects(getObjects(Character1.class));
+            //make sure to add in all the characters so that they are all removed
             removeObjects(getObjects(Endgate.class));
             GameOver gameover= new GameOver();
             addObject(gameover,375,375);

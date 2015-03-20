@@ -6,11 +6,13 @@ import java.util.List.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Character extends Actor
+public class Character1 extends Actor
 {
     int level;
     int animation=1;
     int animationDelay;
+    int animationDelay2=0;
+    //note second one is for endgate animation
     GreenfootImage left1 = new GreenfootImage("MONKEYL1.png");
     GreenfootImage left2 = new GreenfootImage("MONKEYL2.png");
     GreenfootImage left3 = new GreenfootImage("MONKEYL3.png");
@@ -27,11 +29,10 @@ public class Character extends Actor
     GreenfootImage up2 = new GreenfootImage("MONKEYU2.png");
     GreenfootImage up3 = new GreenfootImage("MONKEYU3.png");
 
-    public Character()
+    public Character1()
     {
-        checkWorld();
-        level=1;
 
+        level=1;
     }
 
     /**
@@ -55,26 +56,17 @@ public class Character extends Actor
     {
         if(canSeeLeft(Endgate.class)&& !checkLockStatus()||canSeeRight(Endgate.class)&& !checkLockStatus()||canSeeUp(Endgate.class)&& !checkLockStatus()||canSeeDown(Endgate.class)&& !checkLockStatus())
         {
-            Greenfoot.playSound("explosion.wav");
-            //display win
-            //WorldTutorial.gameStatus =3 ;
-            level++;
-            if(level==2)
+            animationDelay2++;
+            if(animationDelay2==50)
             {
+                Greenfoot.playSound("explosion.wav");
+
                 getWorld().removeObject(this);
                 Greenfoot.setWorld(new WORLDTWO());
 
                 WORLDTWO.lockStatus=1;
-            }
-            if(level==3)
-            {
-                getWorld().removeObject(this);
-                Greenfoot.setWorld(new WORLDTHREE());
-                level++;
 
-                //WORLDTWO.gameStatus=2;
             }
-
         }
     }
 
@@ -120,19 +112,19 @@ public class Character extends Actor
         }
     }
 
-    public void checkWorld()
-    {
-        if (getWorld() instanceof WorldTutorial)
-        {
-            level=1;
-        }
+    // public void checkWorld()
+    // {
+    //     if (getWorld() instanceof WorldTutorial)
+    //     {
+    //        level=1;
+    //     }
 
-        if (getWorld() instanceof WORLDTWO)
-        {
-            level=2;
-        }
+    //    if (getWorld() instanceof WORLDTWO)
+    //   {
+    //        level=2;
+    //    }
 
-    }
+    //  }
 
     private  boolean checkLockStatus()
     {
@@ -160,16 +152,110 @@ public class Character extends Actor
             }
 
         }
-        else
+        if(level==3)
         {
+            if(WORLDTHREE.lockStatus==1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
 
+        }
+        if(level==4)
+        {
+            if(WORLDFOUR.lockStatus==1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        if(level==5)
+        {
+            if(WORLDFIVE.lockStatus==1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        if(level==6)
+        {
+            if(WORLDSIX.lockStatus==1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        if(level==7)
+        {
+            if(WORLDSEVEN.lockStatus==1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        if(level==8)
+        {
+            if(WORLDEIGHT.lockStatus==1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        if(level==9)
+        {
+            if(WORLDNINE.lockStatus==1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        if(level==10)
+        {
+            if(WORLDTEN.lockStatus==1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        else 
+        {
             return false;
         }
     }
-
     public void checkZooKeeper()
     {
-        if(canSeeLeft(Zookeeper.class)||canSeeRight(Zookeeper.class)||canSeeUp2(Zookeeper.class)||canSeeDown2(Zookeeper.class)||canSeeLeft(Zookeeper2.class)||canSeeRight(Zookeeper2.class)||canSeeUp2(Zookeeper2.class)||canSeeDown2(Zookeeper2.class)||canSeeLeft(Zookeeper3.class)||canSeeRight(Zookeeper3.class)||canSeeUp2(Zookeeper3.class)||canSeeDown2(Zookeeper3.class))
+        if(canSeeLeft2(Zookeeper.class)||canSeeRight2(Zookeeper.class)||canSeeUp2(Zookeeper.class)||canSeeDown2(Zookeeper.class)||canSeeLeft(Zookeeper2.class)||canSeeRight(Zookeeper2.class)||canSeeUp2(Zookeeper2.class)||canSeeDown2(Zookeeper2.class)||canSeeLeft(Zookeeper3.class)||canSeeRight(Zookeeper3.class)||canSeeUp2(Zookeeper3.class)||canSeeDown2(Zookeeper3.class))
         {
             //do this for all the other worlds too
 
@@ -364,7 +450,6 @@ public class Character extends Actor
         Actor actor = getOneObjectAtOffset(25, 0, clss); 
         return actor != null; 
     }
-
 
     public boolean canSeeUp(Class clss) 
     {

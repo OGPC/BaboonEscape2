@@ -17,8 +17,9 @@ public class Lever extends Actor
 
     public void checkCharacter()
     {
-        if(canSeeLeft(Character.class) ||canSeeRight(Character.class) ||canSeeUp(Character.class) ||canSeeDown(Character.class))
+        if(canSeeLeft(Character1.class) ||canSeeRight(Character1.class) ||canSeeUp(Character1.class) ||canSeeDown(Character1.class))
         {
+            // make sure to include for all characters
 
             setImage(L2);
         }

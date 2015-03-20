@@ -135,23 +135,23 @@ public class WORLDFIVE extends World
     
     private void prepare()
     {
-        Character character2 = new Character();
+        Character1 character2 = new Character1();
         addObject(character2, 75, 75);
         character2.setLocation(75, 75);
         Zookeeper zookeeper = new Zookeeper();
         addObject(zookeeper, 75, 125);
         zookeeper.setLocation(75, 125);
         Zookeeper zookeeper2 = new Zookeeper();
-        addObject(zookeeper2, 75, 375);
+        addObject(zookeeper2, 75, 325);
         Zookeeper zookeeper3 = new Zookeeper();
         addObject(zookeeper3, 75, 475);
-        zookeeper3.setLocation(75, 472);
+        zookeeper3.setLocation(75, 475);
         Trap trap = new Trap();
-        addObject(trap, 121, 230);
-        trap.setLocation(122, 227);
+        addObject(trap, 125, 175);
+        trap.setLocation(125, 175);
         Trap trap2 = new Trap();
-        addObject(trap2, 133, 282);
-        trap2.setLocation(121, 279);
+        addObject(trap2, 125, 225);
+        trap2.setLocation(125, 225);
         Trap trap3 = new Trap();
         addObject(trap3, 179, 282);
         trap2.setLocation(112, 279);

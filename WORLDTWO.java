@@ -159,8 +159,57 @@ public class WORLDTWO extends World
 
     private void prepare()
     {
-        Character character = new Character();
+        Character1 character = new Character1();
         addObject(character, 75, 75);
+        Zookeeper2 zookeeper25 = new Zookeeper2();
+        addObject(zookeeper25, 326, 80);
+        Zookeeper2 zookeeper26 = new Zookeeper2();
+        addObject(zookeeper26, 527, 177);
+        zookeeper26.setLocation(525, 171);
+        Zookeeper zookeeper12 = new Zookeeper();
+        addObject(zookeeper12, 81, 276);
+        zookeeper12.setLocation(74, 271);
+        Zookeeper3 zookeeper32 = new Zookeeper3();
+        addObject(zookeeper32, 82, 382);
+        zookeeper32.setLocation(74, 374);
+        Zookeeper3 zookeeper33 = new Zookeeper3();
+        addObject(zookeeper33, 334, 377);
+        zookeeper33.setLocation(325, 376);
+        Zookeeper zookeeper4 = new Zookeeper();
+        addObject(zookeeper4, 88, 979);
+        zookeeper4.setLocation(75, 974);
+        Zookeeper2 zookeeper23 = new Zookeeper2();
+        addObject(zookeeper23, 677, 635);
+        Lever lever = new Lever();
+        addObject(lever, 727, 632);
+        lever.setLocation(725, 632);
+        Zookeeper2 zookeeper24 = new Zookeeper2();
+        addObject(zookeeper24, 329, 633);
+        zookeeper24.setLocation(327, 628);
+        Endgate endgate = new Endgate();
+        addObject(endgate, 1029, 631);
+        endgate.setLocation(1027, 626);
+        Trap trap = new Trap();
+        addObject(trap, 978, 639);
+        trap.setLocation(974, 629);
+        Trap trap2 = new Trap();
+        addObject(trap2, 128, 982);
+        trap2.setLocation(126, 978);
+        Trap trap3 = new Trap();
+        addObject(trap3, 185, 987);
+        trap3.setLocation(175, 981);
+        Trap trap4 = new Trap();
+        addObject(trap4, 158, 881);
+        trap4.setLocation(171, 875);
+        Trap trap5 = new Trap();
+        addObject(trap5, 380, 634);
+        trap5.setLocation(372, 631);
+        Trap trap6 = new Trap();
+        addObject(trap6, 430, 225);
+        trap6.setLocation(425, 224);
+        Trap trap7 = new Trap();
+        addObject(trap7, 774, 279);
+        trap7.setLocation(772, 275);
         //Wall wall1=new Wall();
         //addObject(wall1,25,25);
         while( wallNum1<22)

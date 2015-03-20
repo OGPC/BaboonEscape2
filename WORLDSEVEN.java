@@ -106,8 +106,34 @@ public class WORLDSEVEN extends World
     
      private void prepare()
     {
-        Character character = new Character();
+        Character1 character = new Character1();
         addObject(character, 75, 75);
+        Zookeeper zookeeper = new Zookeeper();
+        addObject(zookeeper, 475, 525);
+        Zookeeper2 zookeeper2 = new Zookeeper2();
+        addObject(zookeeper2, 825, 225);
+        Zookeeper zookeeper3 = new Zookeeper();
+        addObject(zookeeper3, 850, 825);
+        Zookeeper2 zookeeper22 = new Zookeeper2();
+        addObject(zookeeper22, 325, 700);
+        Zookeeper2 zookeeper23 = new Zookeeper2();
+        addObject(zookeeper23, 375, 300);
+        Zookeeper zookeeper4 = new Zookeeper();
+        addObject(zookeeper4, 275, 175);
+        Trap trap = new Trap();
+        addObject(trap, 1025, 100);
+        Trap trap2 = new Trap();
+        addObject(trap2, 100, 500);
+        Trap trap3 = new Trap();
+        addObject(trap3, 925, 450);
+        Trap trap4 = new Trap();
+        addObject(trap4, 150, 900);
+        Lever lever = new Lever();
+        addObject(lever, 425, 1025);
+        Zookeeper zookeeper5 = new Zookeeper();
+        addObject(zookeeper5, 75, 975);
+        Endgate endgate = new Endgate();
+        addObject(endgate, 1000, 1000);
         //Wall wall1=new Wall();
         //addObject(wall1,25,25);
         while( wallNum1<22)

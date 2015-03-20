@@ -125,7 +125,7 @@ public class WORLDSIX extends World
 
     private void prepare()
     {
-        Character character = new Character();
+        Character1 character = new Character1();
         addObject(character, 75, 75);
         //Wall wall1=new Wall();
         //addObject(wall1,25,25);

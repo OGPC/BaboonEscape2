@@ -88,8 +88,46 @@ public class WORLDEIGHT extends World
     
      private void prepare()
     {
-        Character character = new Character();
+        Character1 character = new Character1();
         addObject(character, 75, 75);
+        Zookeeper zookeeper = new Zookeeper();
+        addObject(zookeeper, 1025, 75);
+        Zookeeper2 zookeeper2 = new Zookeeper2();
+        addObject(zookeeper2, 550, 157);
+        Zookeeper2 zookeeper22 = new Zookeeper2();
+        addObject(zookeeper22, 75, 250);
+        Zookeeper zookeeper3 = new Zookeeper();
+        addObject(zookeeper3, 500, 625);
+        Zookeeper zookeeper4 = new Zookeeper();
+        addObject(zookeeper4, 425, 875);
+        Zookeeper2 zookeeper23 = new Zookeeper2();
+        addObject(zookeeper23, 325, 875);
+        Zookeeper2 zookeeper24 = new Zookeeper2();
+        addObject(zookeeper24, 375, 525);
+        Zookeeper zookeeper5 = new Zookeeper();
+        addObject(zookeeper5, 975, 335);
+        Zookeeper2 zookeeper25 = new Zookeeper2();
+        addObject(zookeeper25, 375, 225);
+        Trap trap = new Trap();
+        addObject(trap, 700, 175);
+        Trap trap2 = new Trap();
+        addObject(trap2, 925, 200);
+        Trap trap3 = new Trap();
+        addObject(trap3, 300, 700);
+        Trap trap4 = new Trap();
+        addObject(trap4, 150, 600);
+        Trap trap5 = new Trap();
+        addObject(trap5, 875, 525);
+        Trap trap6 = new Trap();
+        addObject(trap6, 925, 950);
+        trap6.setLocation(850, 900);
+        Trap trap7 = new Trap();
+        addObject(trap7, 300, 1025);
+        Lever lever = new Lever();
+        addObject(lever, 375, 1025);
+        lever.setLocation(375, 1025);
+        Endgate endgate = new Endgate();
+        addObject(endgate, 1000, 1000);
         //Wall wall1=new Wall();
         //addObject(wall1,25,25);
         while( wallNum1<22)
