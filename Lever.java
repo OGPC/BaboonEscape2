@@ -8,12 +8,44 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Lever extends Actor
 {
-    /**
-     * Act - do whatever the Lever wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    GreenfootImage L2 = new GreenfootImage("L2.png");
+   
     public void act() 
     {
-        // Add your action code here.
+        checkCharacter();
     }    
+
+    public void checkCharacter()
+    {
+        if(canSeeLeft(Character.class) ||canSeeRight(Character.class) ||canSeeUp(Character.class) ||canSeeDown(Character.class))
+        {
+
+            setImage(L2);
+        }
+    }
+
+    public boolean canSeeLeft(Class clss) 
+    {
+        Actor actor = getOneObjectAtOffset(-25, 0, clss); 
+        return actor != null; 
+    }
+
+    public boolean canSeeUp(Class clss) 
+    {
+        Actor actor = getOneObjectAtOffset(0, -25, clss); 
+        return actor != null; 
+    }
+
+    public boolean canSeeDown(Class clss) 
+    {
+        Actor actor = getOneObjectAtOffset(0, 25, clss); 
+        return actor != null; 
+    }
+
+    public boolean canSeeRight(Class clss) 
+    {
+        Actor actor = getOneObjectAtOffset(25, 0, clss); 
+        return actor != null; 
+    }
+
 }

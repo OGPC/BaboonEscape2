@@ -11,21 +11,21 @@ public class Character extends Actor
     int level;
     int animation=1;
     int animationDelay;
-    GreenfootImage left1 = new GreenfootImage("left1.png");
-    GreenfootImage left2 = new GreenfootImage("left2.png");
-    GreenfootImage left3 = new GreenfootImage("left3.png");
+    GreenfootImage left1 = new GreenfootImage("MONKEYL1.png");
+    GreenfootImage left2 = new GreenfootImage("MONKEYL2.png");
+    GreenfootImage left3 = new GreenfootImage("MONKEYL3.png");
 
-    GreenfootImage right1 = new GreenfootImage("right1.png");
-    GreenfootImage right2 = new GreenfootImage("right2.png");
-    GreenfootImage right3 = new GreenfootImage("right3.png");
+    GreenfootImage right1 = new GreenfootImage("MONKEYR1.png");
+    GreenfootImage right2 = new GreenfootImage("MONKEYR2.png");
+    GreenfootImage right3 = new GreenfootImage("MONKEYR3.png");
 
-    GreenfootImage down1 = new GreenfootImage("down1.png");
-    GreenfootImage down2 = new GreenfootImage("down2.png");
-    GreenfootImage down3 = new GreenfootImage("down3.png");
+    GreenfootImage down1 = new GreenfootImage("MONKEYD1.png");
+    GreenfootImage down2 = new GreenfootImage("MONKEYD2.png");
+    GreenfootImage down3 = new GreenfootImage("MONKEYD3.png");
 
-    GreenfootImage up1 = new GreenfootImage("up1.png");
-    GreenfootImage up2 = new GreenfootImage("up2.png");
-    GreenfootImage up3 = new GreenfootImage("up3.png");
+    GreenfootImage up1 = new GreenfootImage("MONKEYU1.png");
+    GreenfootImage up2 = new GreenfootImage("MONKEYU2.png");
+    GreenfootImage up3 = new GreenfootImage("MONKEYU3.png");
 
     public Character()
     {
@@ -80,7 +80,7 @@ public class Character extends Actor
 
     public void checkTrap()
     {
-        if(canSeeLeft(Trap.class)||canSeeRight(Trap.class)||canSeeUp(Trap.class)||canSeeDown(Trap.class))
+        if(canSeeLeft2(Trap.class)||canSeeRight2(Trap.class)||canSeeUp2(Trap.class)||canSeeDown2(Trap.class))
         {
             Greenfoot.playSound("explosion.wav");
             //display lose
@@ -169,7 +169,7 @@ public class Character extends Actor
 
     public void checkZooKeeper()
     {
-        if(canSeeLeft(Zookeeper.class)||canSeeRight(Zookeeper.class)||canSeeUp(Zookeeper.class)||canSeeDown(Zookeeper.class)||canSeeLeft(Zookeeper2.class)||canSeeRight(Zookeeper2.class)||canSeeUp(Zookeeper2.class)||canSeeDown(Zookeeper2.class)||canSeeLeft(Zookeeper3.class)||canSeeRight(Zookeeper3.class)||canSeeUp(Zookeeper3.class)||canSeeDown(Zookeeper3.class))
+        if(canSeeLeft(Zookeeper.class)||canSeeRight(Zookeeper.class)||canSeeUp2(Zookeeper.class)||canSeeDown2(Zookeeper.class)||canSeeLeft(Zookeeper2.class)||canSeeRight(Zookeeper2.class)||canSeeUp2(Zookeeper2.class)||canSeeDown2(Zookeeper2.class)||canSeeLeft(Zookeeper3.class)||canSeeRight(Zookeeper3.class)||canSeeUp2(Zookeeper3.class)||canSeeDown2(Zookeeper3.class))
         {
             //do this for all the other worlds too
 
@@ -365,17 +365,6 @@ public class Character extends Actor
         return actor != null; 
     }
 
-    public boolean canSeeRightUp(Class clss) 
-    {
-        Actor actor = getOneObjectAtOffset(25, -25, clss); 
-        return actor != null; 
-    }
-
-    public boolean canSeeRightDown(Class clss) 
-    {
-        Actor actor = getOneObjectAtOffset(25, 25, clss); 
-        return actor != null; 
-    }
 
     public boolean canSeeUp(Class clss) 
     {
@@ -391,49 +380,61 @@ public class Character extends Actor
 
     public boolean canSeeLeft2(Class clss) 
     {
-        Actor actor = getOneObjectAtOffset(-23, 0, clss); 
+        Actor actor = getOneObjectAtOffset(-20, 0, clss); 
         return actor != null; 
     }
 
     public boolean canSeeLeftDown2(Class clss) 
     {
-        Actor actor = getOneObjectAtOffset(-23, 24, clss); 
+        Actor actor = getOneObjectAtOffset(-15, 15, clss); 
         return actor != null; 
     }
 
     public boolean canSeeLeftUp2(Class clss) 
     {
-        Actor actor = getOneObjectAtOffset(-23, -23, clss); 
+        Actor actor = getOneObjectAtOffset(-15, -15, clss); 
         return actor != null; 
     }
 
     public boolean canSeeRight2(Class clss) 
     {
-        Actor actor = getOneObjectAtOffset(24, 0, clss); 
+        Actor actor = getOneObjectAtOffset(20, 0, clss); 
         return actor != null; 
     }
 
     public boolean canSeeRightUp2(Class clss) 
     {
-        Actor actor = getOneObjectAtOffset(24, -23, clss); 
+        Actor actor = getOneObjectAtOffset(15, -15, clss); 
         return actor != null; 
     }
 
     public boolean canSeeRightDown2(Class clss) 
     {
-        Actor actor = getOneObjectAtOffset(24, 24, clss); 
+        Actor actor = getOneObjectAtOffset(15, 15, clss); 
         return actor != null; 
     }
 
     public boolean canSeeUp2(Class clss) 
     {
-        Actor actor = getOneObjectAtOffset(0, -23, clss); 
+        Actor actor = getOneObjectAtOffset(0, -20, clss); 
         return actor != null; 
     }
 
     public boolean canSeeDown2(Class clss) 
     {
-        Actor actor = getOneObjectAtOffset(0, 24, clss); 
+        Actor actor = getOneObjectAtOffset(0, 20, clss); 
+        return actor != null; 
+    }
+
+    public boolean canSeeRightUp(Class clss) 
+    {
+        Actor actor = getOneObjectAtOffset(25, -25, clss); 
+        return actor != null; 
+    }
+
+    public boolean canSeeRightDown(Class clss) 
+    {
+        Actor actor = getOneObjectAtOffset(25, 25, clss); 
         return actor != null; 
     }
 
