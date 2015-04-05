@@ -106,7 +106,7 @@ public class WORLDSEVEN extends World
     
      private void prepare()
     {
-        Character1 character = new Character1();
+        Character7 character = new Character7();
         addObject(character, 75, 75);
         Zookeeper zookeeper = new Zookeeper();
         addObject(zookeeper, 475, 525);
@@ -300,10 +300,10 @@ public class WORLDSEVEN extends World
             removeObjects(getObjects(Trap.class));
             removeObjects(getObjects(Lever.class));
             removeObjects(getObjects(Wall.class));
-            removeObjects(getObjects(Character.class));
+            removeObjects(getObjects(Character7.class));
             removeObjects(getObjects(Endgate.class));
             GameOver gameover= new GameOver();
-            addObject(gameover,375,375);
+            addObject(gameover,550,550);
             Greenfoot.delay(1000);
             Greenfoot.stop();
         }

@@ -159,7 +159,7 @@ public class WORLDTWO extends World
 
     private void prepare()
     {
-        Character1 character = new Character1();
+        Character2 character = new Character2();
         addObject(character, 75, 75);
         Zookeeper2 zookeeper25 = new Zookeeper2();
         addObject(zookeeper25, 326, 80);
@@ -474,9 +474,12 @@ public class WORLDTWO extends World
             removeObjects(getObjects(Lever.class));
             removeObjects(getObjects(Wall.class));
             removeObjects(getObjects(Character.class));
+            removeObjects(getObjects(Character2.class));
+            
+            // do for other characters as well
             removeObjects(getObjects(Endgate.class));
             GameOver gameover= new GameOver();
-            addObject(gameover,375,375);
+            addObject(gameover,550,550);
             Greenfoot.delay(1000);
             Greenfoot.stop();
         }

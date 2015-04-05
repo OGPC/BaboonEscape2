@@ -16,4 +16,6 @@ comment6.params=clss
 comment6.target=boolean\ canSeeDown(java.lang.Class)
 comment7.params=clss
 comment7.target=boolean\ canSeeRight(java.lang.Class)
-numComments=8
+comment8.params=clss
+comment8.target=boolean\ canSeeCharacterAndCheckLockStatus(java.lang.Class)
+numComments=9

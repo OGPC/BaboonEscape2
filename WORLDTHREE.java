@@ -85,7 +85,7 @@ public class WORLDTHREE extends World
 
     private void prepare()
     {
-        Character1 character = new Character1();
+        Character3 character = new Character3();
         addObject(character, 75, 75);
         Trap trap12 = new Trap();
         addObject(trap12, 71, 134);
@@ -302,10 +302,10 @@ public class WORLDTHREE extends World
             removeObjects(getObjects(Trap.class));
             removeObjects(getObjects(Lever.class));
             removeObjects(getObjects(Wall.class));
-            removeObjects(getObjects(Character.class));
+            removeObjects(getObjects(Character3.class));
             removeObjects(getObjects(Endgate.class));
             GameOver gameover= new GameOver();
-            addObject(gameover,375,375);
+            addObject(gameover,550,550);
             Greenfoot.delay(1000);
             Greenfoot.stop();
         }

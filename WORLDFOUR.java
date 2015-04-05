@@ -83,23 +83,23 @@ public class WORLDFOUR extends World
     
     private void prepare()
     {
-        Character1 character2 = new Character1();
+         Character4 character2 = new Character4();
         addObject(character2, 75, 75);
         character2.setLocation(75, 75);
         character2.setLocation(75, 75);   
         Zookeeper zookeeper3 = new Zookeeper();
         addObject(zookeeper3, 975, 225);
         zookeeper3.setLocation(975, 225);
-        //Zookeeper zookeeper4 = new Zookeeper();
-        //addObject(zookeeper4, 975, 275);
-        //zookeeper4.setLocation(975, 275);
-        //zookeeper4.setLocation(975, 275);
-        Zookeeper zookeeper5 = new Zookeeper();
-        addObject(zookeeper5, 975, 335);
-        zookeeper5.setLocation(975, 325);
-        Zookeeper zookeeper6 = new Zookeeper();
-        addObject(zookeeper6, 975, 435);
-        zookeeper6.setLocation(975, 425);
+        Zookeeper zookeeper4 = new Zookeeper();
+        addObject(zookeeper4, 975, 275);
+        zookeeper4.setLocation(975, 275);
+        zookeeper4.setLocation(975, 275);
+        //Zookeeper zookeeper5 = new Zookeeper();
+        // addObject(zookeeper5, 975, 325);
+        //zookeeper5.setLocation(975, 325);
+        //Zookeeper zookeeper6 = new Zookeeper();
+        //addObject(zookeeper6, 975, 425);
+        //zookeeper6.setLocation(975, 425);
         Zookeeper2 zookeeper22 = new Zookeeper2();
         addObject(zookeeper22, 885, 235);
         zookeeper22.setLocation(875, 225);
@@ -173,6 +173,29 @@ public class WORLDFOUR extends World
         Trap trap7 = new Trap();
         addObject(trap7, 328, 1025);
         trap7.setLocation(317, 1021);
+
+        removeObject(zookeeper3);
+        removeObject(zookeeper4);
+        removeObject(zookeeper22);
+        removeObject(zookeeper24);
+        removeObject(zookeeper26);
+        removeObject(zookeeper28);
+        Trap trap8 = new Trap();
+        addObject(trap8, 1025, 300);
+        trap8.setLocation(1025, 275);
+        Trap trap9 = new Trap();
+        addObject(trap9, 975, 400);
+        trap9.setLocation(975, 400);
+        Trap trap10 = new Trap();
+        addObject(trap10, 1025, 500);
+        trap10.setLocation(1025, 475);
+        Trap trap11 = new Trap();
+        addObject(trap11, 1025, 575);
+        trap11.setLocation(1025, 575);
+        trap10.setLocation(1025, 525);
+        Endgate endgate = new Endgate();
+        addObject(endgate, 75, 1022);
+        endgate.setLocation(75, 1025);
         {
             Wall wall=new Wall();
             addObject(wall,wallX1,wallY1);
@@ -298,10 +321,10 @@ public class WORLDFOUR extends World
             removeObjects(getObjects(Trap.class));
             removeObjects(getObjects(Lever.class));
             removeObjects(getObjects(Wall.class));
-            removeObjects(getObjects(Character.class));
+            removeObjects(getObjects(Character4.class));
             removeObjects(getObjects(Endgate.class));
             GameOver gameover= new GameOver();
-            addObject(gameover,375,375);
+            addObject(gameover,550,550);
             Greenfoot.delay(1000);
             Greenfoot.stop();
         }

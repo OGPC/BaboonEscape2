@@ -90,6 +90,8 @@ public class WORLDTEN extends World
     
     private void prepare()
     {
+         Character10 character = new Character10();
+        addObject(character, 75, 75);
         Zookeeper zookeeper = new Zookeeper();
         addObject(zookeeper, 175, 125);
         Zookeeper2 zookeeper2 = new Zookeeper2();
@@ -271,7 +273,7 @@ public class WORLDTEN extends World
             removeObjects(getObjects(Trap.class));
             removeObjects(getObjects(Lever.class));
             removeObjects(getObjects(Wall.class));
-            removeObjects(getObjects(Character.class));
+            removeObjects(getObjects(Character10.class));
             removeObjects(getObjects(Endgate.class));
             GameOver gameover= new GameOver();
             addObject(gameover,375,375);

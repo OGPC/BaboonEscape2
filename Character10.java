@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.util.List.*;
+
 /**
  * Write a description of class Character here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Character1 extends Actor
+public class Character10 extends Actor
 {
     int level;
     int animation=1;
@@ -29,10 +29,10 @@ public class Character1 extends Actor
     GreenfootImage up2 = new GreenfootImage("MONKEYU2.png");
     GreenfootImage up3 = new GreenfootImage("MONKEYU3.png");
 
-    public Character1()
+    public Character10()
     {
 
-        level=1;
+        level=10;
         //change for other worlds
     }
 
@@ -63,10 +63,10 @@ public class Character1 extends Actor
                 Greenfoot.playSound("explosion.wav");
 
                 getWorld().removeObject(this);
-                Greenfoot.setWorld(new WORLDTWO());
+                Greenfoot.stop();
                 //change this for other worlds
 
-                WORLDTWO.lockStatus=1;
+                
 
             }
         }
@@ -128,11 +128,11 @@ public class Character1 extends Actor
 
     //  }
 
-    public  boolean checkLockStatus()
+    private  boolean checkLockStatus()
     {
         
         
-            if(WorldTutorial.lockStatus==1)
+            if(WORLDTEN.lockStatus==1)
             {
                 return true;
             }
@@ -140,9 +140,9 @@ public class Character1 extends Actor
             {
                 return false;
             }
-        
 
-       
+        
+        
     }
     public void checkZooKeeper()
     {
@@ -415,4 +415,3 @@ public class Character1 extends Actor
     }
 
 }
-

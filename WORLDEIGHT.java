@@ -88,7 +88,7 @@ public class WORLDEIGHT extends World
     
      private void prepare()
     {
-        Character1 character = new Character1();
+        Character8 character = new Character8();
         addObject(character, 75, 75);
         Zookeeper zookeeper = new Zookeeper();
         addObject(zookeeper, 1025, 75);
@@ -254,7 +254,7 @@ public class WORLDEIGHT extends World
             removeObjects(getObjects(Trap.class));
             removeObjects(getObjects(Lever.class));
             removeObjects(getObjects(Wall.class));
-            removeObjects(getObjects(Character.class));
+            removeObjects(getObjects(Character8.class));
             removeObjects(getObjects(Endgate.class));
             GameOver gameover= new GameOver();
             addObject(gameover,375,375);

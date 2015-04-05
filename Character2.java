@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.util.List.*;
+
 /**
  * Write a description of class Character here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Character1 extends Actor
+public class Character2 extends Actor
 {
     int level;
     int animation=1;
@@ -29,10 +29,10 @@ public class Character1 extends Actor
     GreenfootImage up2 = new GreenfootImage("MONKEYU2.png");
     GreenfootImage up3 = new GreenfootImage("MONKEYU3.png");
 
-    public Character1()
+    public Character2()
     {
 
-        level=1;
+        level=2;
         //change for other worlds
     }
 
@@ -63,10 +63,10 @@ public class Character1 extends Actor
                 Greenfoot.playSound("explosion.wav");
 
                 getWorld().removeObject(this);
-                Greenfoot.setWorld(new WORLDTWO());
+                Greenfoot.setWorld(new WORLDTHREE());
                 //change this for other worlds
 
-                WORLDTWO.lockStatus=1;
+                WORLDTHREE.lockStatus=1;
 
             }
         }
@@ -128,22 +128,22 @@ public class Character1 extends Actor
 
     //  }
 
-    public  boolean checkLockStatus()
+    private  boolean checkLockStatus()
     {
+
         
-        
-            if(WorldTutorial.lockStatus==1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        
+        if(WORLDTWO.lockStatus==1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
 
        
     }
+
     public void checkZooKeeper()
     {
         if(canSeeLeft2(Zookeeper.class)||canSeeRight2(Zookeeper.class)||canSeeUp2(Zookeeper.class)||canSeeDown2(Zookeeper.class)||canSeeLeft2(Zookeeper2.class)||canSeeRight2(Zookeeper2.class)||canSeeUp2(Zookeeper2.class)||canSeeDown2(Zookeeper2.class)||canSeeLeft2(Zookeeper3.class)||canSeeRight2(Zookeeper3.class)||canSeeUp2(Zookeeper3.class)||canSeeDown2(Zookeeper3.class))
@@ -415,4 +415,3 @@ public class Character1 extends Actor
     }
 
 }
-

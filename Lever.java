@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Lever extends Actor
 {
     GreenfootImage L2 = new GreenfootImage("L2.png");
-   
+
     public void act() 
     {
         checkCharacter();
@@ -17,7 +17,7 @@ public class Lever extends Actor
 
     public void checkCharacter()
     {
-        if(canSeeLeft(Character1.class) ||canSeeRight(Character1.class) ||canSeeUp(Character1.class) ||canSeeDown(Character1.class))
+        if(canSeeCharacter(Character1.class)||canSeeCharacter(Character2.class)||canSeeCharacter(Character3.class)||canSeeCharacter(Character4.class)||canSeeCharacter(Character5.class)||canSeeCharacter(Character6.class)||canSeeCharacter(Character7.class)||canSeeCharacter(Character8.class)||canSeeCharacter(Character9.class)||canSeeCharacter(Character10.class))
         {
             // make sure to include for all characters
 
@@ -48,5 +48,17 @@ public class Lever extends Actor
         Actor actor = getOneObjectAtOffset(25, 0, clss); 
         return actor != null; 
     }
+
+    public boolean canSeeCharacter(Class clss)
+    {
+        if (canSeeDown(clss)||canSeeLeft(clss)||canSeeRight(clss)||canSeeDown(clss))
+        {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
 
 }

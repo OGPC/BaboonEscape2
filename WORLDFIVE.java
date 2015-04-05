@@ -135,7 +135,7 @@ public class WORLDFIVE extends World
     
     private void prepare()
     {
-        Character1 character2 = new Character1();
+        Character5 character2 = new Character5();
         addObject(character2, 75, 75);
         character2.setLocation(75, 75);
         Zookeeper zookeeper = new Zookeeper();
@@ -447,7 +447,7 @@ public class WORLDFIVE extends World
             removeObjects(getObjects(Trap.class));
             removeObjects(getObjects(Lever.class));
             removeObjects(getObjects(Wall.class));
-            removeObjects(getObjects(Character.class));
+            removeObjects(getObjects(Character5.class));
             removeObjects(getObjects(Endgate.class));
             GameOver gameover= new GameOver();
             addObject(gameover,375,375);

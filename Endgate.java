@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Endgate extends Actor
 {
-    
+    //do the same animation for all characters like lever
 
     int animation=1;
     int animationDelay=0;
@@ -38,7 +38,7 @@ public class Endgate extends Actor
     
     public void checkLock()
     {
-        if(canSeeLeft(Character1.class)&& !checkLockStatus()||canSeeRight(Character1.class)&& !checkLockStatus()||canSeeUp(Character1.class)&& !checkLockStatus()||canSeeDown(Character1.class)&& !checkLockStatus())
+        if(canSeeCharacterAndCheckLockStatus(Character1.class)||canSeeCharacterAndCheckLockStatus(Character2.class)||canSeeCharacterAndCheckLockStatus(Character3.class)||canSeeCharacterAndCheckLockStatus(Character4.class)||canSeeCharacterAndCheckLockStatus(Character5.class)||canSeeCharacterAndCheckLockStatus(Character6.class)||canSeeCharacterAndCheckLockStatus(Character7.class)||canSeeCharacterAndCheckLockStatus(Character8.class)||canSeeCharacterAndCheckLockStatus(Character9.class)||canSeeCharacterAndCheckLockStatus(Character10.class))
         {
            // Greenfoot.playSound("explosion.wav");
             //remember to make this work for all characters
@@ -85,37 +85,18 @@ public class Endgate extends Actor
         }
     }
     
-    private  boolean checkLockStatus()
+    public  boolean checkLockStatus()
     {
-        if (level==1)
-        {
-            if(WorldTutorial.lockStatus==1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        if(level==2)
-        {
-            if(WORLDTWO.lockStatus==1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-
+       if(WorldTutorial.lockStatus==1||WORLDTWO.lockStatus==1||WORLDTHREE.lockStatus==1||WORLDFOUR.lockStatus==1||WORLDFIVE.lockStatus==1||WORLDSIX.lockStatus==1||WORLDSEVEN.lockStatus==1||WORLDEIGHT.lockStatus==1||WORLDNINE.lockStatus==1||WORLDTEN.lockStatus==1)
+       {
+           return true;
+           
         }
         else
         {
-
             return false;
         }
+       //FIX
     }
     
      public boolean canSeeLeft(Class clss) 
@@ -140,5 +121,16 @@ public class Endgate extends Actor
     {
         Actor actor = getOneObjectAtOffset(25, 0, clss); 
         return actor != null; 
+    }
+    
+     public boolean canSeeCharacterAndCheckLockStatus(Class clss)
+    {
+        if (canSeeDown(clss)&& !checkLockStatus()||canSeeLeft(clss)&& !checkLockStatus()||canSeeRight(clss)&& !checkLockStatus()||canSeeDown(clss)&& !checkLockStatus())
+        {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }

@@ -193,8 +193,56 @@ public class WORLDSIX extends World
 
     private void prepare()
     {
-         Character1 character = new Character1();
+         Character6 character = new Character6();
         addObject(character, 75, 75);
+        Endgate endgate=new Endgate();
+        addObject(endgate,1025,1025);
+        Lever lever=new Lever();
+        addObject(lever,75,1025);
+        Zookeeper zookeeper = new Zookeeper();
+        addObject(zookeeper, 75, 250);
+        zookeeper.setLocation(75, 275);
+        zookeeper.setLocation(75, 275);
+        Zookeeper2 zookeeper2 = new Zookeeper2();
+        addObject(zookeeper2, 325, 175);
+        zookeeper2.setLocation(325, 175);
+        Zookeeper zookeeper3 = new Zookeeper();
+        addObject(zookeeper3, 425, 175);
+        zookeeper3.setLocation(425, 175);
+        Zookeeper2 zookeeper22 = new Zookeeper2();
+        addObject(zookeeper22, 1025, 400);
+        zookeeper22.setLocation(775, 525);
+        Zookeeper2 zookeeper23 = new Zookeeper2();
+        addObject(zookeeper23, 75, 375);
+        zookeeper23.setLocation(75, 375);
+        Trap trap = new Trap();
+        addObject(trap, 350, 575);
+        trap.setLocation(350, 575);
+        Trap trap2 = new Trap();
+        addObject(trap2, 775, 675);
+        trap2.setLocation(775, 675);
+        Zookeeper zookeeper4 = new Zookeeper();
+        addObject(zookeeper4, 425, 775);
+        Zookeeper2 zookeeper24 = new Zookeeper2();
+        addObject(zookeeper24, 75, 625);
+        zookeeper24.setLocation(75, 625);
+        Zookeeper zookeeper5 = new Zookeeper();
+        addObject(zookeeper5, 175, 475);
+        zookeeper5.setLocation(175, 475);
+        Zookeeper2 zookeeper25 = new Zookeeper2();
+        addObject(zookeeper25, 875, 300);
+        zookeeper25.setLocation(875, 300);
+        Zookeeper2 zookeeper26 = new Zookeeper2();
+        addObject(zookeeper26, 925, 175);
+        zookeeper26.setLocation(925, 175);
+        Zookeeper2 zookeeper27 = new Zookeeper2();
+        addObject(zookeeper27, 925, 400);
+        Zookeeper2 zookeeper28 = new Zookeeper2();
+        addObject(zookeeper28, 925, 800);
+        zookeeper28.setLocation(925, 800);
+        Zookeeper zookeeper6 = new Zookeeper();
+        addObject(zookeeper6, 825, 675);
+        zookeeper6.setLocation(225, 725);
         //Wall wall1=new Wall();
         //addObject(wall1,25,25);
         while( wallNum1<22)
@@ -538,7 +586,7 @@ public class WORLDSIX extends World
             removeObjects(getObjects(Trap.class));
             removeObjects(getObjects(Lever.class));
             removeObjects(getObjects(Wall.class));
-            removeObjects(getObjects(Character1.class));
+            removeObjects(getObjects(Character6.class));
             //remember to make this for all characters
             removeObjects(getObjects(Endgate.class));
             GameOver gameover= new GameOver();
