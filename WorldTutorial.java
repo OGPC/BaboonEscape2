@@ -84,6 +84,7 @@ public class WorldTutorial extends World
      */
     private void prepare()
     {
+        
         Trap trap1=new Trap();
         addObject(trap1,trap1X,trap1Y);
 
