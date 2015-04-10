@@ -195,7 +195,7 @@ public class WORLDSIX extends World
     {
          Character6 character = new Character6();
         addObject(character, 75, 75);
-        Endgate endgate=new Endgate();
+        Endgate endgate=new Endgate(6);
         addObject(endgate,1025,1025);
         Lever lever=new Lever();
         addObject(lever,75,1025);
@@ -590,7 +590,7 @@ public class WORLDSIX extends World
             //remember to make this for all characters
             removeObjects(getObjects(Endgate.class));
             GameOver gameover= new GameOver();
-            addObject(gameover,375,375);
+            addObject(gameover,550,550);
             Greenfoot.delay(1000);
             Greenfoot.stop();
         }

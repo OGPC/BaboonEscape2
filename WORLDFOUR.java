@@ -193,7 +193,7 @@ public class WORLDFOUR extends World
         addObject(trap11, 1025, 575);
         trap11.setLocation(1025, 575);
         trap10.setLocation(1025, 525);
-        Endgate endgate = new Endgate();
+        Endgate endgate = new Endgate(4);
         addObject(endgate, 75, 1022);
         endgate.setLocation(75, 1025);
         {

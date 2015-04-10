@@ -2,14 +2,15 @@
 comment0.params=
 comment0.target=void\ act()
 comment0.text=\r\n\ Act\ -\ do\ whatever\ the\ Endgate\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-comment1.params=
-comment1.target=Endgate()
+comment1.params=nPassedInLevelValue
+comment1.target=Endgate(int)
 comment2.params=
 comment2.target=void\ checkLock()
-comment3.params=
-comment3.target=boolean\ checkLockStatus()
+comment3.params=nPassedInLevelValue
+comment3.target=boolean\ checkLockStatus(int)
 comment4.params=clss
 comment4.target=boolean\ canSeeLeft(java.lang.Class)
+comment4.text=\ public\ \ boolean\ checkLockStatus()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ if(WorldTutorial.lockStatus\=\=1||WORLDTWO.lockStatus\=\=1||WORLDTHREE.lockStatus\=\=1||WORLDFOUR.lockStatus\=\=1||WORLDFIVE.lockStatus\=\=1||WORLDSIX.lockStatus\=\=1||WORLDSEVEN.lockStatus\=\=1||WORLDEIGHT.lockStatus\=\=1||WORLDNINE.lockStatus\=\=1||WORLDTEN.lockStatus\=\=1)\r\n\ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ return\ true;\r\n\ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ else\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ return\ false;\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ //FIX\r\n}
 comment5.params=clss
 comment5.target=boolean\ canSeeUp(java.lang.Class)
 comment6.params=clss

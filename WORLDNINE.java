@@ -163,7 +163,7 @@ public class WORLDNINE extends World
         lever.setLocation(125, 1025);
         Trap trap = new Trap();
         addObject(trap, 75, 775);
-        Endgate endgate = new Endgate();
+        Endgate endgate = new Endgate(9);
         addObject(endgate, 975, 975);
         endgate.setLocation(1000, 1000);
         Zookeeper zookeeper25 = new Zookeeper();

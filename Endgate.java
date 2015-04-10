@@ -13,13 +13,15 @@ public class Endgate extends Actor
     int animation=1;
     int animationDelay=0;
     
-    int level;
+    
     
     GreenfootImage D1 = new GreenfootImage("Door1.png");
     GreenfootImage D2 = new GreenfootImage("Door2.png");
     GreenfootImage D3 = new GreenfootImage("Door3.png");
     GreenfootImage D4 = new GreenfootImage("Door4.png");
     GreenfootImage D5 = new GreenfootImage("Door5.png");
+    
+    int localLevel;
     
     /**
      * Act - do whatever the Endgate wants to do. This method is called whenever
@@ -31,9 +33,10 @@ public class Endgate extends Actor
         checkLock();
     }  
     
-    public Endgate()
+   
+    public Endgate(int nPassedInLevelValue)
     {
-        
+        localLevel = nPassedInLevelValue;
     }
     
     public void checkLock()
@@ -85,7 +88,58 @@ public class Endgate extends Actor
         }
     }
     
-    public  boolean checkLockStatus()
+    public boolean checkLockStatus(int nPassedInLevelValue)
+    {
+       int level = nPassedInLevelValue;
+        if( level==1&&WorldTutorial.lockStatus==1)
+        {
+            return true;
+        }
+        if( level==2&&WORLDTWO.lockStatus==1)
+        {
+            return true;
+        }
+         if( level==3&&WORLDTHREE.lockStatus==1)
+        {
+            return true;
+        }
+         if( level==4&&WORLDFOUR.lockStatus==1)
+        {
+            return true;
+        }
+         if( level==5&&WORLDFIVE.lockStatus==1)
+        {
+            return true;
+        }
+         if( level==6&&WORLDSIX.lockStatus==1)
+        {
+            return true;
+        }
+         if( level==7&&WORLDSEVEN.lockStatus==1)
+        {
+            return true;
+        }
+         if( level==8&&WORLDEIGHT.lockStatus==1)
+        {
+            return true;
+        }
+         if( level==9&&WORLDNINE.lockStatus==1)
+        {
+            return true;
+        }
+         if( level==10&&WORLDTEN.lockStatus==1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        
+        
+    }
+    
+   /* public  boolean checkLockStatus()
     {
        if(WorldTutorial.lockStatus==1||WORLDTWO.lockStatus==1||WORLDTHREE.lockStatus==1||WORLDFOUR.lockStatus==1||WORLDFIVE.lockStatus==1||WORLDSIX.lockStatus==1||WORLDSEVEN.lockStatus==1||WORLDEIGHT.lockStatus==1||WORLDNINE.lockStatus==1||WORLDTEN.lockStatus==1)
        {
@@ -97,7 +151,7 @@ public class Endgate extends Actor
             return false;
         }
        //FIX
-    }
+    }*/
     
      public boolean canSeeLeft(Class clss) 
     {
@@ -125,7 +179,7 @@ public class Endgate extends Actor
     
      public boolean canSeeCharacterAndCheckLockStatus(Class clss)
     {
-        if (canSeeDown(clss)&& !checkLockStatus()||canSeeLeft(clss)&& !checkLockStatus()||canSeeRight(clss)&& !checkLockStatus()||canSeeDown(clss)&& !checkLockStatus())
+        if (canSeeDown(clss)&& !checkLockStatus(localLevel)||canSeeLeft(clss)&& !checkLockStatus(localLevel)||canSeeRight(clss)&& !checkLockStatus(localLevel)||canSeeDown(clss)&& !checkLockStatus(localLevel))
         {
             return true;
         }

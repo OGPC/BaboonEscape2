@@ -208,7 +208,7 @@ public class WORLDFIVE extends World
         Zookeeper zookeeper8 = new Zookeeper();
         addObject(zookeeper8, 179, 1023);
         zookeeper8.setLocation(175, 1019);
-        Endgate endgate = new Endgate();
+        Endgate endgate = new Endgate(5);
         addObject(endgate, 78, 1029);
         endgate.setLocation(75, 1024);
         Zookeeper2 zookeeper23 = new Zookeeper2();
@@ -402,13 +402,13 @@ public class WORLDFIVE extends World
             wallNum22=wallNum22 + 1;
         }
         
-        while( wallNum23<2)
+       /* while( wallNum23<2)
         {
             Wall wall=new Wall();
             addObject(wall,wallX23,wallY23);
             wallX23= wallX23+50;
             wallNum23=wallNum23 + 1;
-        }
+        }*/
         
         while( wallNum24<2)
         {

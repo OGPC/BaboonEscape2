@@ -186,7 +186,7 @@ public class WORLDTWO extends World
         Zookeeper2 zookeeper24 = new Zookeeper2();
         addObject(zookeeper24, 329, 633);
         zookeeper24.setLocation(327, 628);
-        Endgate endgate = new Endgate();
+        Endgate endgate = new Endgate(2);
         addObject(endgate, 1029, 631);
         endgate.setLocation(1027, 626);
         Trap trap = new Trap();

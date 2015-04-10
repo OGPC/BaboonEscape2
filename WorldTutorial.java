@@ -90,7 +90,7 @@ public class WorldTutorial extends World
         Trap trap2=new Trap();
         addObject(trap2,trap2X,trap2Y);
 
-        Endgate endgate=new Endgate();
+        Endgate endgate=new Endgate(1);
         addObject(endgate,endX,endY);
 
         Lever lever=new Lever();

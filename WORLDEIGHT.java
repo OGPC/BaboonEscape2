@@ -33,7 +33,7 @@ public class WORLDEIGHT extends World
     
     int wallNum6=0;
     int wallX6=475;
-    int wallY6 =175;
+    int wallY6 =275;
     
     int wallNum7=0;
     int wallX7=175;
@@ -124,9 +124,9 @@ public class WORLDEIGHT extends World
         Trap trap7 = new Trap();
         addObject(trap7, 300, 1025);
         Lever lever = new Lever();
-        addObject(lever, 375, 1025);
-        lever.setLocation(375, 1025);
-        Endgate endgate = new Endgate();
+        addObject(lever, 475, 575);
+        lever.setLocation(475, 575);
+        Endgate endgate = new Endgate(8);
         addObject(endgate, 1000, 1000);
         //Wall wall1=new Wall();
         //addObject(wall1,25,25);
@@ -169,7 +169,7 @@ public class WORLDEIGHT extends World
             wallNum5=wallNum5 + 1;
         }
         
-        while( wallNum6<6)
+        while( wallNum6<4)
         {
             Wall wall=new Wall();
             addObject(wall,wallX6,wallY6);

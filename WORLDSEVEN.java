@@ -132,7 +132,7 @@ public class WORLDSEVEN extends World
         addObject(lever, 425, 1025);
         Zookeeper zookeeper5 = new Zookeeper();
         addObject(zookeeper5, 75, 975);
-        Endgate endgate = new Endgate();
+        Endgate endgate = new Endgate(7);
         addObject(endgate, 1000, 1000);
         //Wall wall1=new Wall();
         //addObject(wall1,25,25);

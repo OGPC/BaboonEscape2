@@ -170,10 +170,10 @@ public class WORLDTHREE extends World
         Lever lever = new Lever();
         addObject(lever, 83, 1030);
         lever.setLocation(74, 1024);
-        Endgate endgate = new Endgate();
+        Endgate endgate = new Endgate(3);
         addObject(endgate, 969, 813);
         removeObject(endgate);
-        Endgate endgate2 = new Endgate();
+        Endgate endgate2 = new Endgate(3);
         addObject(endgate2, 1031, 234);
         endgate2.setLocation(1026, 227);
         //Wall wall1=new Wall();
