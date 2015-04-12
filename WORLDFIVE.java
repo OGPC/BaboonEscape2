@@ -187,9 +187,9 @@ public class WORLDFIVE extends World
         addObject(zookeeper5, 81, 582);
         zookeeper5.setLocation(75, 575);
         Trap trap8 = new Trap();
-        addObject(trap8, 183, 629);
-        trap8.setLocation(182, 629);
-        trap8.setLocation(176, 625);
+        addObject(trap8, 175, 625);
+        trap8.setLocation(175, 625);
+        trap8.setLocation(175, 625);
         Trap trap9 = new Trap();
         addObject(trap9, 238, 631);
         trap9.setLocation(228, 624);
@@ -197,17 +197,17 @@ public class WORLDFIVE extends World
         addObject(trap10, 287, 631);
         trap10.setLocation(281, 624);
         Zookeeper zookeeper6 = new Zookeeper();
-        addObject(zookeeper6, 186, 780);
-        zookeeper6.setLocation(180, 775);
+        addObject(zookeeper6, 175, 775);
+        zookeeper6.setLocation(175, 775);
         Trap trap11 = new Trap();
-        addObject(trap11, 130, 783);
-        trap11.setLocation(126, 776);
+        addObject(trap11, 125, 775);
+        trap11.setLocation(126, 775);
         Zookeeper zookeeper7 = new Zookeeper();
-        addObject(zookeeper7, 185, 883);
+        addObject(zookeeper7, 185, 875);
         zookeeper7.setLocation(180, 875);
         Zookeeper zookeeper8 = new Zookeeper();
-        addObject(zookeeper8, 179, 1023);
-        zookeeper8.setLocation(175, 1019);
+        addObject(zookeeper8, 175, 1025);
+        zookeeper8.setLocation(175, 1025);
         Endgate endgate = new Endgate(5);
         addObject(endgate, 78, 1029);
         endgate.setLocation(75, 1024);
@@ -450,7 +450,7 @@ public class WORLDFIVE extends World
             removeObjects(getObjects(Character5.class));
             removeObjects(getObjects(Endgate.class));
             GameOver gameover= new GameOver();
-            addObject(gameover,375,375);
+            addObject(gameover,550,550);
             Greenfoot.delay(1000);
             Greenfoot.stop();
         }

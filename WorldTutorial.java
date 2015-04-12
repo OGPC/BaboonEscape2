@@ -90,6 +90,27 @@ public class WorldTutorial extends World
 
         Trap trap2=new Trap();
         addObject(trap2,trap2X,trap2Y);
+        
+        TextCreator textCreator1=new TextCreator(4);
+        addObject(textCreator1,275,75);
+        
+        TextCreator textCreator2=new TextCreator(5);
+        addObject(textCreator2,575,125);
+        
+        TextCreator textCreator3=new TextCreator(6);
+        addObject(textCreator3,325,475);
+        
+        TextCreator textCreator4=new TextCreator(7);
+        addObject(textCreator4,325,525);
+        
+        TextCreator textCreator5=new TextCreator(8);
+        addObject(textCreator5,325,555);
+        
+        TextCreator textCreator6=new TextCreator(9);
+        addObject(textCreator6,627,600);
+        
+        TextCreator textCreator7=new TextCreator(10);
+        addObject(textCreator7,620,625);
 
         Endgate endgate=new Endgate(1);
         addObject(endgate,endX,endY);
@@ -178,6 +199,7 @@ public class WorldTutorial extends World
             removeObjects(getObjects(Zookeeper2.class));
             removeObjects(getObjects(Zookeeper3.class));
             removeObjects(getObjects(Trap.class));
+            removeObjects(getObjects(TextCreator.class));
             removeObjects(getObjects(Lever.class));
             removeObjects(getObjects(Wall.class));
             removeObjects(getObjects(Character1.class));
