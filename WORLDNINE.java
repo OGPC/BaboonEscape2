@@ -407,7 +407,7 @@ public class WORLDNINE extends World
     {
         if(gameStatus == 2)
         {
-            Greenfoot.playSound("buzz.wav");
+            Greenfoot.playSound("DeathSound.mp3");
 
             removeObjects(getObjects(Zookeeper.class));
             removeObjects(getObjects(Zookeeper2.class));
@@ -418,9 +418,12 @@ public class WORLDNINE extends World
             removeObjects(getObjects(Character9.class));
             removeObjects(getObjects(Endgate.class));
             GameOver gameover= new GameOver();
-            addObject(gameover,375,375);
-            Greenfoot.delay(1000);
-            Greenfoot.stop();
+            addObject(gameover,550,550);
+            gameStatus=1;
+            TextCreator textCreator1=new TextCreator(6,9);
+            addObject(textCreator1,550,725);
+            TextCreator textCreator2=new TextCreator(33,0);
+            addObject(textCreator2,550,775);
 
             //loserino level
 

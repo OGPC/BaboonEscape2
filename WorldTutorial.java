@@ -91,25 +91,18 @@ public class WorldTutorial extends World
         Trap trap2=new Trap();
         addObject(trap2,trap2X,trap2Y);
         
-        TextCreator textCreator1=new TextCreator(4);
+        TextCreator textCreator1=new TextCreator(4,0);
         addObject(textCreator1,275,75);
         
-        TextCreator textCreator2=new TextCreator(5);
+        TextCreator textCreator2=new TextCreator(5,0);
         addObject(textCreator2,575,125);
         
-        TextCreator textCreator3=new TextCreator(6);
-        addObject(textCreator3,325,475);
         
-        TextCreator textCreator4=new TextCreator(7);
-        addObject(textCreator4,325,525);
         
-        TextCreator textCreator5=new TextCreator(8);
-        addObject(textCreator5,325,555);
-        
-        TextCreator textCreator6=new TextCreator(9);
+        TextCreator textCreator6=new TextCreator(9,0);
         addObject(textCreator6,627,600);
         
-        TextCreator textCreator7=new TextCreator(10);
+        TextCreator textCreator7=new TextCreator(10,0);
         addObject(textCreator7,620,625);
 
         Endgate endgate=new Endgate(1);
@@ -193,7 +186,8 @@ public class WorldTutorial extends World
     {
         if(gameStatus == 2)
         {
-            Greenfoot.playSound("buzz.wav");
+            Greenfoot.playSound("DeathSound.mp3");
+            gameStatus=1;
 
             removeObjects(getObjects(Zookeeper.class));
             removeObjects(getObjects(Zookeeper2.class));
@@ -207,8 +201,11 @@ public class WorldTutorial extends World
             removeObjects(getObjects(Endgate.class));
             GameOver gameover= new GameOver();
             addObject(gameover,375,375);
-            Greenfoot.delay(1000);
-            Greenfoot.stop();
+            gameStatus=1;
+            TextCreator textCreator1=new TextCreator(6,1);
+            addObject(textCreator1,375,550);
+            TextCreator textCreator2=new TextCreator(33,1);
+            addObject(textCreator2,375,625);
 
             //loserino level
 

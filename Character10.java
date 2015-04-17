@@ -60,10 +60,13 @@ public class Character10 extends Actor
             animationDelay2++;
             if(animationDelay2==50)
             {
-                Greenfoot.playSound("explosion.wav");
+                Greenfoot.playSound("DoorOpen.wav");
+                Greenfoot.delay(50);
+                Greenfoot.playSound("GameComplete.wav");
 
                 getWorld().removeObject(this);
-                Greenfoot.stop();
+                Greenfoot.setWorld( new TransitionWorld(10));
+                
                 //change this for other worlds
 
                 
@@ -76,7 +79,7 @@ public class Character10 extends Actor
     {
         if(canSeeLeft2(Trap.class)||canSeeRight2(Trap.class)||canSeeUp2(Trap.class)||canSeeDown2(Trap.class))
         {
-            Greenfoot.playSound("explosion.wav");
+            Greenfoot.playSound("TrapClick.wav");
             //display lose
 
             WORLDTWO.gameStatus=2;
@@ -90,6 +93,7 @@ public class Character10 extends Actor
             WORLDTEN.gameStatus=2;
 
             WorldTutorial.gameStatus=2;
+            Greenfoot.delay(90);
 
         }
     }
@@ -110,7 +114,7 @@ public class Character10 extends Actor
             WORLDTEN.lockStatus=2;
             WorldTutorial.lockStatus=2;
 
-            Greenfoot.playSound("buzz.wav");
+            Greenfoot.playSound("LeverClick.wav");
         }
     }
 
@@ -158,6 +162,7 @@ public class Character10 extends Actor
             WORLDSEVEN.gameStatus=2;
             WORLDEIGHT.gameStatus=2;
             WORLDNINE.gameStatus=2;
+            WORLDTEN.gameStatus=2;
             WorldTutorial.gameStatus=2;
         }
     }

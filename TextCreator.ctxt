@@ -1,7 +1,9 @@
 #BlueJ class context
-comment0.params=inputText
-comment0.target=TextCreator(int)
+comment0.params=inputText\ inputLevel
+comment0.target=TextCreator(int,\ int)
 comment1.params=
 comment1.target=void\ act()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ TextCreater\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-numComments=2
+comment2.params=inputLevel2
+comment2.target=void\ transitionWorld(int)
+numComments=3

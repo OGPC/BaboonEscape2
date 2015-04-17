@@ -27,25 +27,25 @@ public class Lever extends Actor
 
     public boolean canSeeLeft(Class clss) 
     {
-        Actor actor = getOneObjectAtOffset(-25, 0, clss); 
+        Actor actor = getOneObjectAtOffset(-20, 0, clss); 
         return actor != null; 
     }
 
     public boolean canSeeUp(Class clss) 
     {
-        Actor actor = getOneObjectAtOffset(0, -25, clss); 
+        Actor actor = getOneObjectAtOffset(0, -20, clss); 
         return actor != null; 
     }
 
     public boolean canSeeDown(Class clss) 
     {
-        Actor actor = getOneObjectAtOffset(0, 25, clss); 
+        Actor actor = getOneObjectAtOffset(0, 20, clss); 
         return actor != null; 
     }
 
     public boolean canSeeRight(Class clss) 
     {
-        Actor actor = getOneObjectAtOffset(25, 0, clss); 
+        Actor actor = getOneObjectAtOffset(20, 0, clss); 
         return actor != null; 
     }
 

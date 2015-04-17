@@ -10,7 +10,7 @@ public class WORLDEIGHT extends World
 {
     public static int lockStatus=1;
     public static int gameStatus=1;
-    
+
     int wallNum1=0;
     int wallX1=25;
     int wallY1=25;
@@ -18,7 +18,7 @@ public class WORLDEIGHT extends World
     int wallX2=25;
     int wallY2=1075;
     int wallNum2=0;
-    
+
     int wallNum3=0;
     int wallX3=25;
     int wallY3 = 75;
@@ -26,48 +26,47 @@ public class WORLDEIGHT extends World
     int wallNum4=0;
     int wallX4=1075;
     int wallY4 = 75;
-    
+
     int wallNum5=0;
     int wallX5=75;
     int wallY5 =175;
-    
+
     int wallNum6=0;
     int wallX6=475;
     int wallY6 =275;
-    
+
     int wallNum7=0;
     int wallX7=175;
     int wallY7=475;
-    
+
     int wallNum8=0;
     int wallX8=525;
     int wallY8=425;
-    
+
     int wallNum9=0;
     int wallX9=425;
     int wallY9=525;
-    
+
     int wallNum10=0;
     int wallX10=425;
     int wallY10=775;
-    
+
     int wallNum11=0;
     int wallX11=225;
     int wallY11=825;
-    
+
     int wallNum12=0;
     int wallX12=425;
     int wallY12=925;
-    
+
     int wallNum13=0;
     int wallX13=525;
     int wallY13=325;  
-    
+
     int wallNum14=0;
     int wallX14=475;
     int wallY14=675; 
-   
-    
+
     
     /**
      * Constructor for objects of class WORLDSIX.
@@ -77,16 +76,16 @@ public class WORLDEIGHT extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1100, 1100, 1);  
-        
+
         prepare();
     }
-    
+
     public void act()
     {
         gameOver();
     }
-    
-     private void prepare()
+
+    private void prepare()
     {
         Character8 character = new Character8();
         addObject(character, 75, 75);
@@ -105,7 +104,7 @@ public class WORLDEIGHT extends World
         Zookeeper2 zookeeper24 = new Zookeeper2();
         addObject(zookeeper24, 375, 525);
         Zookeeper zookeeper5 = new Zookeeper();
-        addObject(zookeeper5, 975, 335);
+        addObject(zookeeper5, 975, 375);
         Zookeeper2 zookeeper25 = new Zookeeper2();
         addObject(zookeeper25, 375, 225);
         Trap trap = new Trap();
@@ -145,7 +144,7 @@ public class WORLDEIGHT extends World
             wallX2= wallX2+50;
             wallNum2=wallNum2 + 1;
         }
-         while( wallNum3<20)
+        while( wallNum3<20)
         {
             Wall wall=new Wall();
             addObject(wall,wallX3,wallY3);
@@ -160,7 +159,7 @@ public class WORLDEIGHT extends World
             wallY4= wallY4+50;
             wallNum4=wallNum4 + 1;
         }
-        
+
         while( wallNum5<8)
         {
             Wall wall=new Wall();
@@ -168,7 +167,7 @@ public class WORLDEIGHT extends World
             wallX5= wallX5+50;
             wallNum5=wallNum5 + 1;
         }
-        
+
         while( wallNum6<4)
         {
             Wall wall=new Wall();
@@ -176,7 +175,7 @@ public class WORLDEIGHT extends World
             wallY6= wallY6+50;
             wallNum6=wallNum6 + 1;
         }
-        
+
         while( wallNum7<7)
         {
             Wall wall=new Wall();
@@ -184,7 +183,7 @@ public class WORLDEIGHT extends World
             wallX7= wallX7+50;
             wallNum7=wallNum7 + 1;
         }
-        
+
         while( wallNum8<7)
         {
             Wall wall=new Wall();
@@ -192,23 +191,23 @@ public class WORLDEIGHT extends World
             wallX8= wallX8+50;
             wallNum8=wallNum8 + 1;
         }
-        
-         while( wallNum9<5)
+
+        while( wallNum9<5)
         {
             Wall wall=new Wall();
             addObject(wall,wallX9,wallY9);
             wallY9= wallY9+50;
             wallNum9=wallNum9 + 1;
         }
-        
-         while( wallNum10<1)
+
+        while( wallNum10<1)
         {
             Wall wall=new Wall();
             addObject(wall,wallX10,wallY10);
             wallY10= wallY10+50;
             wallNum10=wallNum10 + 1;
         }
-        
+
         while( wallNum11<11)
         {
             Wall wall=new Wall();
@@ -216,7 +215,7 @@ public class WORLDEIGHT extends World
             wallX11= wallX11+50;
             wallNum11=wallNum11 + 1;
         }
-        
+
         while( wallNum12<4)
         {
             Wall wall=new Wall();
@@ -224,7 +223,7 @@ public class WORLDEIGHT extends World
             wallY12= wallY12+50;
             wallNum12=wallNum12 + 1;
         }
-        
+
         while( wallNum13<9)
         {
             Wall wall=new Wall();
@@ -232,7 +231,7 @@ public class WORLDEIGHT extends World
             wallX13= wallX13+50;
             wallNum13=wallNum13 + 1;
         }
-        
+
         while( wallNum14<12)
         {
             Wall wall=new Wall();
@@ -241,12 +240,12 @@ public class WORLDEIGHT extends World
             wallNum14=wallNum14 + 1;
         }
     }
-    
+
     private void gameOver()
     {
         if(gameStatus == 2)
         {
-            Greenfoot.playSound("buzz.wav");
+            Greenfoot.playSound("DeathSound.mp3");
 
             removeObjects(getObjects(Zookeeper.class));
             removeObjects(getObjects(Zookeeper2.class));
@@ -257,9 +256,12 @@ public class WORLDEIGHT extends World
             removeObjects(getObjects(Character8.class));
             removeObjects(getObjects(Endgate.class));
             GameOver gameover= new GameOver();
-            addObject(gameover,375,375);
-            Greenfoot.delay(1000);
-            Greenfoot.stop();
+            addObject(gameover,550,550);
+            gameStatus=1;
+            TextCreator textCreator1=new TextCreator(6,8);
+            addObject(textCreator1,550,725);
+            TextCreator textCreator2=new TextCreator(33,0);
+            addObject(textCreator2,550,775);
         }
     }
 }

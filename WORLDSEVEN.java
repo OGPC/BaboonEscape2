@@ -292,7 +292,7 @@ public class WORLDSEVEN extends World
     {
         if(gameStatus == 2)
         {
-            Greenfoot.playSound("buzz.wav");
+            Greenfoot.playSound("DeathSound.mp3");
 
             removeObjects(getObjects(Zookeeper.class));
             removeObjects(getObjects(Zookeeper2.class));
@@ -304,8 +304,11 @@ public class WORLDSEVEN extends World
             removeObjects(getObjects(Endgate.class));
             GameOver gameover= new GameOver();
             addObject(gameover,550,550);
-            Greenfoot.delay(1000);
-            Greenfoot.stop();
+            gameStatus=1;
+            TextCreator textCreator1=new TextCreator(6,7);
+            addObject(textCreator1,550,725);
+            TextCreator textCreator2=new TextCreator(33,0);
+            addObject(textCreator2,550,775);
         }
     }
 }
