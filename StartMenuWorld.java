@@ -65,37 +65,12 @@ public class StartMenuWorld extends World
 
             menuStatus=0;
             TextCreator textCreator5= new TextCreator(21,0);
-            addObject(textCreator5,185,125);
+            addObject(textCreator5,225,100);
 
             TextCreator textCreator6= new TextCreator(22,0);
-            addObject(textCreator6,185,140);
+            addObject(textCreator6,250,200);
 
-            TextCreator textCreator7= new TextCreator(23,0);
-            addObject(textCreator7,185,155);
-
-            TextCreator textCreator8= new TextCreator(24,0);
-            addObject(textCreator8,185,170);
-
-            TextCreator textCreator9= new TextCreator(25,0);
-            addObject(textCreator9,185,185);
-
-            TextCreator textCreator10= new TextCreator(26,0);
-            addObject(textCreator10,185,200);
-
-            TextCreator textCreator11= new TextCreator(27,0);
-            addObject(textCreator11,185,215);
-
-            TextCreator textCreator12= new TextCreator(28,0);
-            addObject(textCreator12,185,230);
-
-            TextCreator textCreator13= new TextCreator(29,0);
-            addObject(textCreator13,185,245);
-
-            TextCreator textCreator14= new TextCreator(30,0);
-            addObject(textCreator14,185,260);
-
-            TextCreator textCreator15= new TextCreator(31,0);
-            addObject(textCreator15,185,275);
+            
 
             TextCreator textCreator16= new TextCreator(20,0);
             addObject(textCreator16,475,275);

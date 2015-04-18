@@ -107,6 +107,18 @@ public class WORLDEIGHT extends World
         addObject(zookeeper5, 975, 375);
         Zookeeper2 zookeeper25 = new Zookeeper2();
         addObject(zookeeper25, 375, 225);
+        
+        Zookeeper3 zookeeper26 = new Zookeeper3();
+        addObject(zookeeper26, 675, 75);
+        
+        Zookeeper3 zookeeper27 = new Zookeeper3();
+        addObject(zookeeper27, 525, 475);
+        
+        Zookeeper2 zookeeper28 = new Zookeeper2();
+        addObject(zookeeper28, 575, 875);
+        
+        Zookeeper3 zookeeper29 = new Zookeeper3();
+        addObject(zookeeper29, 175, 525);
         Trap trap = new Trap();
         addObject(trap, 700, 175);
         Trap trap2 = new Trap();
@@ -127,6 +139,8 @@ public class WORLDEIGHT extends World
         lever.setLocation(475, 575);
         Endgate endgate = new Endgate(8);
         addObject(endgate, 1000, 1000);
+        Wall wall2 = new Wall();
+        addObject(wall2, 75, 475);
         //Wall wall1=new Wall();
         //addObject(wall1,25,25);
         while( wallNum1<22)

@@ -100,6 +100,15 @@ public class TextCreator extends Actor
         {
             setImage("MONKEYU2.png");
         }
+         if(textNum==21)
+        {
+            setImage("storyline1.png");
+        }
+         if(textNum==22)
+        {
+            setImage("storyline2.png");
+        }
+        /*
         if(textNum==21)
         {
             setImage(new GreenfootImage("After numerous years of mistreatment,the baboons", 20, Color.GREEN, Color.BLACK));
@@ -154,7 +163,7 @@ public class TextCreator extends Actor
         {
             setImage(new GreenfootImage("of their path lies the Head Zookeeper, B-Rad", 20, Color.GREEN, Color.BLACK));
 
-        }
+        }*/
         if(textNum==32)
         {
             setImage("Continue.png");

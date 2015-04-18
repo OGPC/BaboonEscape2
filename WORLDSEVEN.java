@@ -112,6 +112,7 @@ public class WORLDSEVEN extends World
         addObject(zookeeper, 475, 525);
         Zookeeper2 zookeeper2 = new Zookeeper2();
         addObject(zookeeper2, 825, 225);
+        
         Zookeeper zookeeper3 = new Zookeeper();
         addObject(zookeeper3, 850, 825);
         Zookeeper2 zookeeper22 = new Zookeeper2();
@@ -123,17 +124,32 @@ public class WORLDSEVEN extends World
         Trap trap = new Trap();
         addObject(trap, 1025, 100);
         Trap trap2 = new Trap();
-        addObject(trap2, 100, 500);
+        addObject(trap2, 100, 525);
         Trap trap3 = new Trap();
-        addObject(trap3, 925, 450);
+        addObject(trap3, 925, 475);
         Trap trap4 = new Trap();
-        addObject(trap4, 150, 900);
+        addObject(trap4, 150, 925);
         Lever lever = new Lever();
         addObject(lever, 425, 1025);
         Zookeeper zookeeper5 = new Zookeeper();
         addObject(zookeeper5, 75, 975);
         Endgate endgate = new Endgate(7);
-        addObject(endgate, 1000, 1000);
+        addObject(endgate, 1025, 1025);
+        Zookeeper3 zookeeper6 = new Zookeeper3();
+        addObject(zookeeper6, 625, 425);
+        
+        Zookeeper3 zookeeper7 = new Zookeeper3();
+        addObject(zookeeper7, 75, 475);
+        
+        Zookeeper3 zookeeper9 = new Zookeeper3();
+        addObject(zookeeper9, 75, 475);
+        
+         Zookeeper3 zookeeper10 = new Zookeeper3();
+        addObject(zookeeper10, 675, 875);
+        
+        Zookeeper2 zookeeper8 = new Zookeeper2();
+        addObject(zookeeper8, 675, 625);
+         
         //Wall wall1=new Wall();
         //addObject(wall1,25,25);
         while( wallNum1<22)

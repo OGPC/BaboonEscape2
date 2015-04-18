@@ -1,12 +1,14 @@
 #BlueJ class context
 comment0.params=
 comment0.target=WorldTutorial()
-comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ WorldTutorial.\r\n\ \r\n
+comment0.text=\r\n\ Define\ world\ size\r\n\ \r\n\ Constructor\r\n\ \r\n\ Background\ Music\r\n\ \r\n
 comment1.params=
 comment1.target=void\ act()
+comment1.text=\r\n\ Act\ Metod\ includes\ skepping\ world\ tutorial\ if\ skipped\ in\ menu\r\n
 comment2.params=
 comment2.target=void\ prepare()
 comment2.text=\r\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\ That\ is\:\ create\ the\ initial\r\n\ objects\ and\ add\ them\ to\ the\ world.\r\n
 comment3.params=
 comment3.target=void\ gameOver()
+comment3.text=\r\n\ Method\ for\ losing\ the\ game\r\n\ \r\n\ Removes\ all\ objects\ and\ creates\ try\ again\ button\r\n
 numComments=4

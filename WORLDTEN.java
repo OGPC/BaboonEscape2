@@ -227,7 +227,7 @@ public class WORLDTEN extends World
             wallNum11=wallNum11 + 1;
         }
 
-        while( wallNum12<7)
+        while( wallNum12<12)
         {
             Wall wall=new Wall();
             addObject(wall,wallX12,wallY12);
@@ -258,6 +258,17 @@ public class WORLDTEN extends World
             wallX16= wallX16+50;
             wallNum16=wallNum16 + 1;
         }
+
+        Wall wall153 = new Wall();
+        addObject(wall153, 375, 975);
+        wall153.setLocation(375, 975);
+        Wall wall154 = new Wall();
+        addObject(wall154, 625, 1025);
+        wall154.setLocation(375, 1025);
+
+        Trap trap7 = new Trap();
+        addObject(trap7, 525, 675);
+        
     }
 
     private void gameOver()

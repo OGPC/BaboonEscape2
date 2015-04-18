@@ -1,10 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class WorldONE here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * The code in the box tells the code if the lever has been hit
+ * 
+ * The second part of the code defines all the walls in the world
+ * 
+ * 
  */
 public class WorldTutorial extends World
 {
@@ -15,6 +17,7 @@ public class WorldTutorial extends World
     public static int lockStatus=1;
     public static int gameStatus=1;
     public static int animStatus=1;
+   
 
     int wallNum1=0;
     int wallX1=25;
@@ -63,7 +66,11 @@ public class WorldTutorial extends World
     GreenfootSound backgroundMusic = new GreenfootSound("Track1.mp3");
 
     /**
-     * Constructor for objects of class WorldTutorial.
+     * Define world size
+     * 
+     * Constructor
+     * 
+     * Background Music
      * 
      */
     public WorldTutorial()
@@ -81,6 +88,10 @@ public class WorldTutorial extends World
         prepare();
     }
 
+    
+    /**
+     * Act Metod includes skepping world tutorial if skipped in menu
+     */
     public void act()
     {
         gameOver();
@@ -195,6 +206,11 @@ public class WorldTutorial extends World
         }
     }
 
+    /**
+     * Method for losing the game
+     * 
+     * Removes all objects and creates try again button
+     */
     public void gameOver()
     {
         if(gameStatus == 2)
