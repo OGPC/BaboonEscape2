@@ -50,6 +50,7 @@ public class Character10 extends Actor
         checkLever();
         checkTrap();
         checkEndgate();
+        checkBRAD();
 
     }
 
@@ -94,6 +95,28 @@ public class Character10 extends Actor
 
             WorldTutorial.gameStatus=2;
             Greenfoot.delay(90);
+
+        }
+    }
+    public void checkBRAD()
+    {
+        if(canSeeLeft2(BRAD.class)||canSeeRight2(BRAD.class)||canSeeUp2(BRAD.class)||canSeeDown2(BRAD.class))
+        {
+            
+            //display lose
+
+            WORLDTWO.gameStatus=2;
+            WORLDTHREE.gameStatus=2;
+            WORLDFOUR.gameStatus=2;
+            WORLDFIVE.gameStatus=2;
+            WORLDSIX.gameStatus=2;
+            WORLDSEVEN.gameStatus=2;
+            WORLDEIGHT.gameStatus=2;
+            WORLDNINE.gameStatus=2;
+            WORLDTEN.gameStatus=2;
+
+            WorldTutorial.gameStatus=2;
+            
 
         }
     }

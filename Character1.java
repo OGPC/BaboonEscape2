@@ -96,6 +96,8 @@ public class Character1 extends Actor
 
         }
     }
+    
+    
 
     private void checkLever()
     {
