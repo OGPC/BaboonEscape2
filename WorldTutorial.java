@@ -59,15 +59,24 @@ public class WorldTutorial extends World
 
     int endX=675;
     int endY=675;
+    
+    GreenfootSound backgroundMusic = new GreenfootSound("Track1.mp3");
 
     /**
-     * Constructor for objects of class WorldONE.
+     * Constructor for objects of class WorldTutorial.
      * 
      */
     public WorldTutorial()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(750, 750, 1); 
+        
+        if(StartMenuWorld.musicStatus==0)
+        {
+            backgroundMusic.playLoop();
+        }
+        
+        
 
         prepare();
     }
@@ -75,6 +84,10 @@ public class WorldTutorial extends World
     public void act()
     {
         gameOver();
+        if(StartMenuWorld.tutorialStatus==1)
+        {
+           Greenfoot.setWorld(new WORLDTWO());
+        }
         //gameOver2();
     }
 

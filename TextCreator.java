@@ -43,14 +43,11 @@ public class TextCreator extends Actor
         {
             setImage(new GreenfootImage("Hit lever to unlock EndGate", 25, Color.BLACK, Color.WHITE));
         }
-        
+
         if(textNum==6)
         {
             setImage("TryAgain.png");
         }
-        
-
-        
 
         if(textNum==9)
         {
@@ -153,7 +150,7 @@ public class TextCreator extends Actor
             setImage(new GreenfootImage("to prevent them from escaping. At the end", 20, Color.GREEN, Color.BLACK));
 
         }
-         if(textNum==31)
+        if(textNum==31)
         {
             setImage(new GreenfootImage("of their path lies the Head Zookeeper, B-Rad", 20, Color.GREEN, Color.BLACK));
 
@@ -174,9 +171,38 @@ public class TextCreator extends Actor
         {
             setImage("Back.png");
         }
-     
-        
-        
+        if(textNum==36)
+        {
+            setImage("Creditsactual.png");
+        }
+        if(textNum==37)
+        {
+            setImage("SkipStory.png");
+        }
+        if(textNum==38)
+        {
+            setImage("DisableMusic.png");
+        }
+        if(textNum==39)
+        {
+            setImage("DisableTutorial.png");
+        }
+        if(textNum==40)
+        {
+            setImage("Check.png");
+            //remember to program the animation between check and box
+        }
+        if(textNum==41)
+        {
+            setImage("Check.png");
+            //remember to program the animation between check and box
+        }
+        if(textNum==42)
+        {
+            setImage("Check.png");
+            //remember to program the animation between check and box
+        }
+
     }
 
     /**
@@ -185,30 +211,115 @@ public class TextCreator extends Actor
      */
     public void act() 
     {
+        Actor textCreator;
+        textCreator=getOneObjectAtOffset(0,0,TextCreator.class);
+        World world;
+        world=getWorld();
+        if(StartMenuWorld.storyStatus==0)
+        {
+            if(StartMenuWorld.permaMenuStatus==2&&textNum==40)
+            {
+                
+                world.removeObject(this);
+            }
+        }
+        if(StartMenuWorld.tutorialStatus==0)
+        {
+            if(StartMenuWorld.permaMenuStatus==2&&textNum==42)
+            {
+                
+                world.removeObject(this);
+            }
+        }
+        if(StartMenuWorld.musicStatus==0)
+        {
+            if(StartMenuWorld.permaMenuStatus==2&&textNum==41)
+            {
+                
+                world.removeObject(this);
+            }
+        }
+
         // Add your action code here.
+
+        //disabling functionality
+        if( Greenfoot.mouseClicked(this)&&textNum==37 )
+        {
+            if ( StartMenuWorld.storyStatus==0 )
+            {
+                Greenfoot.playSound("MenuClick.wav");
+                StartMenuWorld.storyStatus=1;
+                Greenfoot.delay(1);
+            }
+            else if (Greenfoot.mouseClicked(this)&&textNum==37&&StartMenuWorld.storyStatus==1)
+            {
+                Greenfoot.playSound("MenuClick.wav");
+                StartMenuWorld.storyStatus=0;
+                Greenfoot.delay(1);
+            }
+
+        }
+
+        if( Greenfoot.mouseClicked(this)&&textNum==38 )
+        {
+            if ( StartMenuWorld.musicStatus==0 )
+            {
+                Greenfoot.playSound("MenuClick.wav");
+                StartMenuWorld.musicStatus=1;
+                Greenfoot.delay(1);
+            }
+            else if (Greenfoot.mouseClicked(this)&&textNum==38&&StartMenuWorld.musicStatus==1)
+            {
+                Greenfoot.playSound("MenuClick.wav");
+                StartMenuWorld.musicStatus=0;
+                Greenfoot.delay(1);
+            }
+
+        }
+
+        if( Greenfoot.mouseClicked(this)&&textNum==39 )
+        {
+            if ( StartMenuWorld.tutorialStatus==0 )
+            {
+                Greenfoot.playSound("MenuClick.wav");
+                StartMenuWorld.tutorialStatus=1;
+                Greenfoot.delay(1);
+            }
+            else if (Greenfoot.mouseClicked(this)&&textNum==39&&StartMenuWorld.tutorialStatus==1)
+            {
+                Greenfoot.playSound("MenuClick.wav");
+                StartMenuWorld.tutorialStatus=0;
+                Greenfoot.delay(1);
+            }
+
+        }
+
+
+
         if(Greenfoot.mouseClicked(this)&&textNum==35)
         {
             Greenfoot.playSound("MenuClick.wav");
             Greenfoot.setWorld(new StartMenuWorld());
-            
+            StartMenuWorld.permaMenuStatus=0;
+
         }
         if(Greenfoot.mouseClicked(this)&&textNum==32)
         {
             Greenfoot.playSound("MenuClick.wav");
             Greenfoot.setWorld(new InstructionWorld());
-            
+
         }
         if(Greenfoot.mouseClicked(this)&&textNum==1)
         {
             Greenfoot.playSound("MenuClick.wav");
             Greenfoot.setWorld(new WorldTutorial());
-            
+
         }
         if(Greenfoot.mouseClicked(this)&&textNum==12)
         {
             Greenfoot.playSound("MenuClick.wav");
             StartMenuWorld.menuStatus=1;
-            
+
             //start game
         }
         if(Greenfoot.mouseClicked(this)&&textNum==13)
@@ -223,8 +334,7 @@ public class TextCreator extends Actor
             StartMenuWorld.menuStatus=3;
             //credits
         }
-        
-        
+
         transitionWorld(level);
     }
 
@@ -243,7 +353,7 @@ public class TextCreator extends Actor
             WORLDEIGHT.lockStatus=1;
             WORLDNINE.lockStatus=1;
             WORLDTEN.lockStatus=1;
-             WorldTutorial.gameStatus=1;
+            WorldTutorial.gameStatus=1;
             WORLDTWO.gameStatus=1;
             WORLDTHREE.gameStatus=1;
             WORLDFOUR.gameStatus=1;
@@ -303,7 +413,7 @@ public class TextCreator extends Actor
             WORLDTHREE.gameStatus=1;
             Greenfoot.setWorld(new WORLDTHREE());
             Greenfoot.playSound("MenuClick.wav");
-           //continuing game
+            //continuing game
         }
 
         //worldthree
@@ -321,7 +431,7 @@ public class TextCreator extends Actor
             Greenfoot.setWorld(new StartMenuWorld());
             Greenfoot.playSound("MenuClick.wav");
 
-           //Quiting game
+            //Quiting game
         }
         if(level==3&&Greenfoot.mouseClicked(this)&&textNum==19)
         {
@@ -330,7 +440,7 @@ public class TextCreator extends Actor
             Greenfoot.playSound("MenuClick.wav");
             //continuing game
         }
-        
+
         //worldfour
         if(level==4&&Greenfoot.mouseClicked(this)&&textNum==17)
         {
@@ -354,8 +464,8 @@ public class TextCreator extends Actor
             Greenfoot.playSound("MenuClick.wav");
             //continuing game
         }
-        
-         //worldfive
+
+        //worldfive
         if(level==5&&Greenfoot.mouseClicked(this)&&textNum==17)
         {
             WORLDFIVE.lockStatus=1;
@@ -378,7 +488,7 @@ public class TextCreator extends Actor
             Greenfoot.playSound("MenuClick.wav");
             //continuing game
         }
-        
+
         //worldsix
         if(level==6&&Greenfoot.mouseClicked(this)&&textNum==17)
         {
@@ -402,7 +512,7 @@ public class TextCreator extends Actor
             Greenfoot.playSound("MenuClick.wav");
             //continuing game
         }
-        
+
         //worldseven
         if(level==7&&Greenfoot.mouseClicked(this)&&textNum==17)
         {
@@ -426,7 +536,7 @@ public class TextCreator extends Actor
             Greenfoot.playSound("MenuClick.wav");
             //continuing game
         }
-        
+
         //worldeight
         if(level==8&&Greenfoot.mouseClicked(this)&&textNum==17)
         {
@@ -450,7 +560,7 @@ public class TextCreator extends Actor
             Greenfoot.playSound("MenuClick.wav");
             //continuing game
         }
-        
+
         //worldnine
         if(level==9&&Greenfoot.mouseClicked(this)&&textNum==17)
         {
@@ -474,8 +584,8 @@ public class TextCreator extends Actor
             Greenfoot.playSound("MenuClick.wav");
             //continuing game
         }
-        
-         //worldnine
+
+        //worldnine
         if(level==10&&Greenfoot.mouseClicked(this)&&textNum==17)
         {
             WORLDTEN.lockStatus=1;
@@ -499,7 +609,7 @@ public class TextCreator extends Actor
             //change this to game complete world
             //continuing game
         }
-        
+
         //If you die, this is try again
         if(level==1&&Greenfoot.mouseClicked(this)&&textNum==6)
         {
@@ -571,9 +681,6 @@ public class TextCreator extends Actor
             Greenfoot.playSound("MenuClick.wav");
             //redoing level
         }
-        
-        
-        
 
     }
 }

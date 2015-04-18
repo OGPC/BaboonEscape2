@@ -123,7 +123,7 @@ public class WORLDTEN extends World
         Zookeeper zookeeper4 = new Zookeeper();
         addObject(zookeeper4, 450, 375);
         Trap trap2 = new Trap();
-        addObject(trap2, 650, 400);
+        addObject(trap2, 650, 425);
         Trap trap3 = new Trap();
         addObject(trap3, 925, 725);
         Zookeeper zookeeper5 = new Zookeeper();
@@ -137,6 +137,8 @@ public class WORLDTEN extends World
         Zookeeper zookeeper6 = new Zookeeper();
         addObject(zookeeper6, 550, 550);
         zookeeper6.setLocation(550, 550);
+        BRAD bRAD = new BRAD();
+        addObject(bRAD, 650, 375);
         while( wallNum1<22)
         {
             Wall wall=new Wall();
@@ -233,7 +235,6 @@ public class WORLDTEN extends World
             wallNum12=wallNum12 + 1;
         }
 
-        
         while( wallNum14<8)
         {
             Wall wall=new Wall();
@@ -273,6 +274,7 @@ public class WORLDTEN extends World
             removeObjects(getObjects(Wall.class));
             removeObjects(getObjects(Character10.class));
             removeObjects(getObjects(Endgate.class));
+            removeObjects(getObjects(BRAD.class));
             GameOver gameover= new GameOver();
             addObject(gameover,550,550);
             gameStatus=1;
